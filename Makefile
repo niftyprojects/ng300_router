@@ -5,4 +5,4 @@ export BR2_EXTERNAL := $(shell pwd)
 def_all: all
 
 %:
-	+$(MAKE) --no-print-directory -C buildroot O=$(BR2_EXTERNAL)/output MAKEFLAGS= $*
+	@+$(MAKE) --no-print-directory -C buildroot O=$(BR2_EXTERNAL)/output MAKEFLAGS= $*
