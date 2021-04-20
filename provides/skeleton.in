@@ -1,0 +1,7 @@
+config BR2_ROOTFS_SKELETON_READONLY
+	bool "Readonly root filesystem"
+	select BR2_PACKAGE_SKELETON_RO_ROOT
+	help
+		Provides a filesystem skeleton designed for a read-only / and a
+		writeable /var.
+
