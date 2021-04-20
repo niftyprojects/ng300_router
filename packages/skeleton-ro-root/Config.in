@@ -4,3 +4,51 @@ config BR2_PACKAGE_SKELETON_RO_ROOT
 
 config BR2_PACKAGE_PROVIDES_SKELETON
 	default "skeleton-ro-root" if BR2_PACKAGE_SKELETON_RO_ROOT
+
+if BR2_PACKAGE_SKELETON_RO_ROOT
+
+config BR2_PACKAGE_SKELETON_RO_ROOT_VAR_DEVICE
+	string "/var device"
+	help
+	  Device to mount on /var read-write. Should be in ext4 format.
+
+config BR2_TARGET_GENERIC_HOSTNAME
+	string "System hostname"
+	default "router"
+	help
+	  Select system hostname to be stored in /etc/hostname.
+
+	  Leave empty to not create /etc/hostname, or to keep the
+	  one from a custom skeleton.
+
+config BR2_TARGET_GENERIC_ISSUE
+	string "System banner"
+	default "Nifty Router"
+	help
+	  Select system banner (/etc/issue) to be displayed at login.
+
+	  Leave empty to not create /etc/issue, or to keep the
+	  one from a custom skeleton.
+
+config BR2_TARGET_GENERIC_ADDRS
+        string "System IP Addresses"
+        default "172.18.0.1"
+        help
+                Static IP Address(es) assigned to the system. Used for
+                populating /etc/hosts with the device hostname.
+
+                Leave empty to not create additional entries. Multiple
+		addresses can be space separated.
+
+config BR2_SYSTEM_DEFAULT_PATH
+        string "System Path"
+        default "/bin:/sbin:/usr/bin:/usr/sbin"
+        help
+                Default system path.
+
+config BR2_TARGET_GENERIC_SERIAL_CONSOLE_LOGIN
+        bool "Enable logon on /dev/ttyS0."
+        help
+                Enables a login getty on the first serial port.
+
+endif
