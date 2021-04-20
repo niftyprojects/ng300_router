@@ -1,0 +1,1 @@
+admin -1 admin -1 * /var/home/admin /bin/ash sudo

@@ -1,0 +1,2 @@
+/var/home/admin/.ssh d 0700 admin admin - - - - -
+/var/home/admin/.ssh/authorized_keys f 0600 admin admin - - - - -
