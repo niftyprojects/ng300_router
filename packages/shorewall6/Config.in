@@ -1,0 +1,7 @@
+config BR2_PACKAGE_SHOREWALL6
+	bool "shorewall6"
+	select BR2_PACKAGE_SHOREWALL_CORE
+	help
+	  Provides IPv6 filtering functionality for Shorewall.
+
+	  https://shorewall.org

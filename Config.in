@@ -1,1 +1,4 @@
 source "$BR2_EXTERNAL_NIFTY_ROUTER_PATH/packages/skeleton-ro-root/Config.in"
+source "$BR2_EXTERNAL_NIFTY_ROUTER_PATH/packages/shorewall-core/Config.in"
+source "$BR2_EXTERNAL_NIFTY_ROUTER_PATH/packages/shorewall/Config.in"
+source "$BR2_EXTERNAL_NIFTY_ROUTER_PATH/packages/shorewall6/Config.in"

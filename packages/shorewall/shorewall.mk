@@ -1,0 +1,19 @@
+SHOREWALL_VERSION_MAJOR = 5.2
+SHOREWALL_VERSION = $(SHOREWALL_VERSION_MAJOR).8
+SHOREWALL_SITE = https://shorewall.org/pub/shorewall/$(SHOREWALL_VERSION_MAJOR)/shorewall-$(SHOREWALL_VERSION)
+SHOREWALL_SOURCE = shorewall-$(SHOREWALL_VERSION).tar.bz2
+
+SHOREWALL_LICENSE = GPLv2 or later
+SHOREWALL_LICENSE_FILES = LICENSE
+
+define SHOREWALL_CONFIGURE
+	$(@D)/configure --vendor=default --initfile=S41shorewall --confdir=/var/etc
+endef
+SHOREWALL_CONFIGURE_CMDS += $(SHOREWALL_CONFIGURE)
+
+define SHOREWALL_INSTALL
+	DESTDIR=$(TARGET_DIR) $(@D)/install.sh 
+endef
+SHOREWALL_INSTALL_TARGET_CMDS += $(SHOREWALL_INSTALL)
+
+$(eval $(generic-package))

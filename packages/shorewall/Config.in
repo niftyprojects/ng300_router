@@ -1,0 +1,7 @@
+config BR2_PACKAGE_SHOREWALL
+	bool "shorewall"
+	select BR2_PACKAGE_SHOREWALL_CORE
+	help
+	  Provides IPv4 filtering functionality for Shorewall.
+
+	  https://shorewall.org
