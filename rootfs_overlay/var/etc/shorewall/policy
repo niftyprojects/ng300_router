@@ -1,0 +1,4 @@
+#SOURCE    DEST        POLICY      LOGLEVEL     LIMIT
+lan        net         ACCEPT
+net        all         DROP        info
+all        all         REJECT      info

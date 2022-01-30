@@ -1,0 +1,5 @@
+?FORMAT 2
+#ACTION                 SOURCE                  DEST            PROTO   DPORT   SPORT   IPSEC   MARK    USER    SWITCH  ORIGDEST        PROBABILITY
+#
+#
+MASQUERADE              LAN_IF,GUEST_IF        NET_IF

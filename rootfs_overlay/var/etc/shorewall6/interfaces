@@ -1,0 +1,5 @@
+?FORMAT 2
+#ZONE   INTERFACE       OPTIONS
+net     NET_IF          dhcp,tcpflags,sourceroute=0,physical=eth0
+lan     LAN_IF          dhcp,tcpflags,physical=brlan,routeback
+guest   GUEST_IF        dhcp,tcpflags,physical=brguest,routeback
