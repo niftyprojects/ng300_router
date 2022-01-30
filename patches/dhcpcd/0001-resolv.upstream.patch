@@ -1,0 +1,14 @@
+diff -U3 -r dhcpcd-9.1.4-orig/hooks/20-resolv.conf dhcpcd-9.1.4/hooks/20-resolv.conf
+--- dhcpcd-9.1.4-orig/hooks/20-resolv.conf	2020-07-03 04:41:23.000000000 -0600
++++ dhcpcd-9.1.4/hooks/20-resolv.conf	2022-01-29 20:10:53.470773154 -0700
+@@ -63,8 +63,8 @@
+ 	else
+ 		echo "# /etc/resolv.conf.tail can replace this line" >> "$cf"
+ 	fi
+-	if change_file /etc/resolv.conf "$cf"; then
+-		chmod 644 /etc/resolv.conf
++	if change_file /var/etc/resolv.upstream "$cf"; then
++		chmod 644 /var/etc/resolv.upstream
+ 	fi
+ 	rm -f "$cf"
+ }
